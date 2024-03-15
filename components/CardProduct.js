@@ -13,7 +13,7 @@ const CardProduct = ({product}) => {
         </View>
         <View>
             <H4>{product.name}</H4>
-            <Text style={styles.price}> R$ {product.price}</Text>
+            <Text style={styles.price}>R$ {product.price}</Text>
         </View>
     </View>
   )
@@ -21,10 +21,9 @@ const CardProduct = ({product}) => {
 
 const styles = StyleSheet.create({
     card: {
-        flexDirection: 'row',
         alignItems: 'center',
-        width: 300,
-        height: 100,
+        width: 200,
+        height: 130,
         backgroundColor: '#FFF',
         borderRadius: 20,
         marginVertical: 10,
@@ -35,7 +34,7 @@ const styles = StyleSheet.create({
     },
     photoImg: {
         width: 70,
-        height: 70
+        height: 70,
     },
     price: {
         marginTop: 4
