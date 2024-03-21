@@ -12,18 +12,18 @@ const Button = ({title, onPress}) => {
 
 const styles = StyleSheet.create({
     customButton: {
-        backgroundColor: "#ffcbdb",
+        backgroundColor: "#345944",
         borderRadius: 20,
         paddingVertical: 8,
         paddingHorizontal: 28,
-        borderRadius: 25
       },
       tHButton: {
         borderRadius: 20,
         marginVertical: 8
       },
       textButton: {
-        color: '#FFF'
+        color: '#FFF',
+        textAlign: 'center'
       }
 })
 

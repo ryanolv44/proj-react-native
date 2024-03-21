@@ -1,23 +1,14 @@
-import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View, ImageBackground} from 'react-native'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Body from './components/Body'
+import { NavigationContainer } from '@react-navigation/native'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ImageBackground 
-        resizeMode="cover"
-        source={require('./assets/images/bg-mobile.jpg')}
-        style={styles.bg}
-      >
-        <Header />
-        <Body />
-        <Footer />
-      </ImageBackground>
-      <StatusBar style="light" />
-    </View>
+    <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={home} />
+          
+        </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -27,6 +18,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+   hello: {
+
+   },
   bg: {
     flex: 1,
     width: '100%',
