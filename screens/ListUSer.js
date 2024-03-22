@@ -1,20 +1,32 @@
-// import { StatusBar } from 'expo-status-bar'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import ListUser from './screens/ListUser'
-import Cadastrar from './screens/Cadastrar'
-import Editar from './screens/Editar'
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, View, ImageBackground, ScrollView} from 'react-native'
+import Body from '../components/Body'
 
-const Stack = createNativeStackNavigator()
-
-export default function App() {
+const ListUser = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Principal" component={ListUser} />
-        <Stack.Screen name="Cadastrar" component={Cadastrar} />
-        <Stack.Screen name="Editar" component={Editar} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  )
+    <View>
+      <ImageBackground 
+        resizeMode="cover"
+        source={require('../assets/images/bg-mobile.jpg')}
+        style={styles.bg}
+      >
+        <Body />
+      </ImageBackground>
+      <StatusBar style="light" />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center'
+  },
+  bg: {
+    flex: 1,
+    width: '100%',
+    justifyContent: 'center',
+  }
+});
+
+export default ListUser
